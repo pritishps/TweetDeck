@@ -1,0 +1,110 @@
+.navigation-container {
+    background-color: var(--body-background);
+    width: 260px;
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.profile-info-display-container{
+    display: flex;
+    width: 240px;
+    margin: 10px auto 0px;
+    /* margin-top: 10px; */
+    padding: 12px 16px;
+    border-radius: 80px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.profile-info-display-container:hover{
+    background-color: var(--hover-item);
+}
+
+.loggedin-user-profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.loggedin-user-account-headings {
+    margin: 0px;
+    padding: 0px 12px;
+    /* background-color: white; */
+}
+.loggedin-user-account-headings > h2{
+    width: 9em;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--normal-text);
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.loggedin-user-account-headings > p{
+    color: var(--normal-text);
+    margin: 0px ;
+    color: #536471;
+    /* font-weight: 600; */
+    font-size: 15px;
+}
+
+.navigation-container-top-menu-option{
+    color: var(--normal-text);
+    font-weight: 800;
+}
+
+.line{
+    color: var(--border-color);
+}
+
+.tweet-button{
+    background-color: #1d9bf0;
+    display: block;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    width: 90%;
+    margin: auto;
+    /* padding: ; */
+    padding: 8px;
+    border: none;
+    border-radius: 80px;
+}
+.tweet-button:hover{
+    background-color: #1a8cd8;
+}
+
+.search-addcolumn-container{
+    display: flex;
+    justify-content: center;
+    padding: 12px 40px;
+    text-align: center;
+    color: var(--normal-text);
+    gap: 2px;
+}
+
+.search-addcolumn-container > div > p{
+    /* font-size: 30px; */
+    font-size: 10px;
+    margin: 0;
+}
+
+.search-addcolumn-container > div >i{
+    font-size: 18px;
+}
+
+.add-col-container ,
+.search-container{
+    width: 50%;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+
+.add-col-container:hover ,
+.search-container:hover{
+    background-color: var(--hover-item);
+}

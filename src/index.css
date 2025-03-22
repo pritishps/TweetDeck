@@ -1,0 +1,52 @@
+/* .resizable-div {
+    height: 100vh;
+    background-color: black;
+    overflow: auto;
+}
+
+.resizer {
+    width: 5px;
+    height: 100vh;
+    cursor: ew-resize;
+    background-color: gray;
+} */
+
+
+:root{
+    --body-background:#ffffff;
+    --normal-text:#0F1419;
+    --highlight:#1d9bf0;
+    --hover-item:#e7e7e8;
+    --border-color:black
+
+}
+
+.dark{
+    --body-background:#000000;
+    --normal-text:#e7e9ea;
+    --highlight:#1d9bf0;
+    --hover-item:#181818;
+    --border-color:white;
+}
+
+
+@font-face {
+    font-family: "twitter";
+    src: url("fonts/chirp-bold-web.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+
+*{
+    font-family: "CustomFont", sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.app-container{
+    background-color: var(--body-background);
+}
+
