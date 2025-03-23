@@ -25,6 +25,7 @@ function App() {
         showNavigationContainer &&
         <NavigationContainer/>
       }
+      {/* <NavigationContainer/> */}
       <DeckContainer deckName=""/>
       {/* <div>Some more text</div> */}
       {/* <FeedContainer/> */}

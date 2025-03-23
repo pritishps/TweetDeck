@@ -5,6 +5,7 @@
     border-right: 1px solid var(--border-color);
     height: 100vh;
     user-select: none;
+    flex-shrink: 0;
 }
 
 /* TOP USER DETAILS SECTION */
@@ -142,7 +143,8 @@
 
 .navigation-conntainer-bottom-options{
     position: fixed;
-    width: inherit;
+    /* margin-top: auto; */
+    width: 260px;
     bottom: 0px;
     padding: 20px 30px;
     color: var(--normal-text);    
