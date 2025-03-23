@@ -50,7 +50,7 @@
 .loggedin-user-account-headings > p{
     color: var(--normal-text);
     margin: 0px ;
-    color: #536471;
+    color: var(--secondary-text);
     /* font-weight: 600; */
     font-size: 15px;
 }

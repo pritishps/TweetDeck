@@ -1,12 +1,14 @@
 .feed-container{
     border: 1px solid var(--border-color);
-    width: 280px;
-    min-width: 270px;
+    width: 320px;
+    min-width: 320px;
     display: flex;
     flex-shrink: 0;
     /* position: absolute; */
     user-select: none;
+    height: 100vh;
 }
+
 
 .feed-div{
     width: 100%;
@@ -14,6 +16,54 @@
 
 .resize-div{
     width: 5px;
-    background-color: white;
+    background-color: var(--hover-item);
     cursor: col-resize;
+}
+
+.feed-heading-container{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-bottom: 1px solid var(--border-color);
+    /* padding: 5px 0px; */
+    justify-content: space-between;
+}
+
+.drag-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--normal-text);
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 22px;
+}
+
+.feed-name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.feed-type{
+    font-size: 11px;
+    margin: 0;
+    color: var(--normal-text);
+    color: #536471;
+}
+
+.feed-name{
+    color: var(--normal-text);
+    margin: 0;
+    font-weight: 800;
+}
+
+.feed-heading-sttings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--normal-text);
+    cursor: pointer;
 }

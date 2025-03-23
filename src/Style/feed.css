@@ -1,0 +1,14 @@
+.feed-content {
+    display: flex;
+    /* width: 100em; */
+    /* border: 1px solid white; */
+    flex-direction: column;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    max-height: 100vh; /* Or set a specific height */
+    scrollbar-width: none;  /* Hide scrollbar (Firefox) */
+    -ms-overflow-style: none; /* Hide scrollbar (IE & Edge) */
+}
+
+.feed-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar (Chrome, Safari, Edge, Opera) */
+}
