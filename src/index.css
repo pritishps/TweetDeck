@@ -1,4 +1,4 @@
-/* .resizable-div {
+.resizable-div {
     height: 100vh;
     background-color: black;
     overflow: auto;
@@ -9,7 +9,7 @@
     height: 100vh;
     cursor: ew-resize;
     background-color: gray;
-} */
+}
 
 
 :root{
@@ -17,7 +17,7 @@
     --normal-text:#0F1419;
     --highlight:#1d9bf0;
     --hover-item:#e7e7e8;
-    --border-color:black
+    --border-color:#262525;
 
 }
 
@@ -26,7 +26,7 @@
     --normal-text:#e7e9ea;
     --highlight:#1d9bf0;
     --hover-item:#181818;
-    --border-color:white;
+    --border-color:#262525;
 }
 
 
@@ -48,5 +48,14 @@
 
 .app-container{
     background-color: var(--body-background);
+    /* background-color: var; */
+    height: 100vh;
+    display: flex;
+    /* justify-content: start; */
 }
 
+
+.app-container{
+    /* display: flex; */
+
+}

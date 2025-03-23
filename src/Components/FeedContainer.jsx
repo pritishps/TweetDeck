@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
-function App() {
-  const [width, setWidth] = useState(200); // Initial width
+function FeedContainer() {
+  const [width, setWidth] = useState(300); // Initial width
   const resizableRef = useRef(null);
 
   const handleMouseDown = (event) => {
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default FeedContainer;
