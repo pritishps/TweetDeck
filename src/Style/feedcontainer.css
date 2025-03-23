@@ -1,0 +1,19 @@
+.feed-container{
+    border: 1px solid var(--border-color);
+    width: 280px;
+    min-width: 270px;
+    display: flex;
+    flex-shrink: 0;
+    /* position: absolute; */
+    user-select: none;
+}
+
+.feed-div{
+    width: 100%;
+}
+
+.resize-div{
+    width: 5px;
+    background-color: white;
+    cursor: col-resize;
+}

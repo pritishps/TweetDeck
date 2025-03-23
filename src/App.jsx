@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector,useDispatch } from "react-redux"
 import NavigationContainer from "./Components/NavigationContainer";
 import FeedContainer from "./Components/FeedContainer";
-import DecksContainer from "./Components/DecksContainer";
+import DeckContainer from "./Components/DeckContainer";
 function App() {
 
 
@@ -25,7 +25,7 @@ function App() {
         showNavigationContainer &&
         <NavigationContainer/>
       }
-      <DecksContainer deckName=""/>
+      <DeckContainer deckName=""/>
       {/* <div>Some more text</div> */}
       {/* <FeedContainer/> */}
     </div>

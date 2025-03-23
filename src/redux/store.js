@@ -5,6 +5,34 @@ const initialState = {
     theme:"dark",
     searchPanel:false,
     newTweetPanel:false,
+    decks:[
+        {
+            deckName:'Main',
+            deckFeeds:[
+                {
+                    feedName:"Home",
+                },
+                {
+                    feedName:"Folowings"
+                }
+                
+            ]
+        },
+        {
+            deckName:'My Deck',
+            deckFeeds:[
+                {
+                    feedName:"Liked",
+                },
+                {
+                    feedName:"Folowings"
+                }
+                
+            ]
+            
+        }
+    ]
+
 }
 
 const reducers  = (state = initialState,action)=>{

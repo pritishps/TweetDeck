@@ -1,41 +1,57 @@
-import { useState, useRef } from "react";
+import React, { useEffect, useRef } from 'react'
+import "../Style/feedcontainer.css";
 
 function FeedContainer() {
-  const [width, setWidth] = useState(300); // Initial width
-  const resizableRef = useRef(null);
 
-  const handleMouseDown = (event) => {
-    event.preventDefault();
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-  };
+    const boxRef = useRef();
+    const resizerRef = useRef();
 
-  const handleMouseMove = (event) => {
-    if (resizableRef.current) {
-      setWidth(event.clientX);
-    }
-  };
+    useEffect(()=>{
+        const resizeableBox = boxRef.current;
+        const style = window.getComputedStyle(resizeableBox);
+        let width = parseInt(style.width,10)
+        // console.log(style.x)
 
-  const handleMouseUp = () => {
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
-  };
+
+        let xcord = 0;
+
+        const onMouseRightResize = (event) =>{
+            const dx = event.clientX - xcord;
+            xcord = event.clientX;
+            width = width + dx;
+            resizeableBox.style.width = `${width}px`;
+        }
+        const onMouseUpResize = (event)=>{
+            document.removeEventListener("mousemove",onMouseRightResize);
+        }
+
+        const onMouseDownRightResize = (event)=>{
+            // console.log("EVENT TRIGGERED")
+            xcord = event.clientX;
+            resizeableBox.style.left = style.left;
+            resizeableBox.style.right = style.right;
+            document.addEventListener("mousemove",onMouseRightResize);
+            document.addEventListener("mouseup",onMouseUpResize)
+        }
+
+
+        // ADDING THE LISTENERS
+
+        const rightResizer = resizerRef.current;
+        rightResizer.addEventListener("mousedown",onMouseDownRightResize)
+
+        return()=>{
+            rightResizer.removeEventListener("mousedown",onMouseDownRightResize)
+        }
+
+    },[])
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
-      <div
-        ref={resizableRef}
-        className="resizable-div"
-        style={{ width: `${width}px` }}
-      >
-        Some text
-      </div>
-      <div
-        className="resizer"
-        onMouseDown={handleMouseDown}
-      />
+    <div ref={boxRef} className='feed-container'>
+        <div className='feed-div'>Content is aiodjahdha dsa dkja d Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, nemo! Ut eveniet cupiditate doloribus facilis ipsam sequi aspernatur impedit a libero porro corporis similique aliquid ullam nam ipsa, earum atque nesciunt.</div>
+        <div ref={resizerRef} className='resize-div'></div>
     </div>
-  );
+  )
 }
 
-export default FeedContainer;
+export default FeedContainer

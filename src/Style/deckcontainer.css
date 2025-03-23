@@ -1,0 +1,7 @@
+.deck-container{
+    display: flex;
+    justify-content: start;
+    overflow-x: scroll;
+    scrollbar-width: 5px;
+    position: relative;
+}
